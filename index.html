@@ -25,455 +25,165 @@ font: 100%/1.45 "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
 
 </style>
 
+  <style media="" data-href="flatnav.css">@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
-<style>
-#contentSub, #search-controls, .firstHeading, #footer-box, #catlinks, #p-logo {
-    display:none;}
-#top-section {
-    border: none;
-    height: 0px;}
-#menubar{
-    display: none;
+* {
+  margin: 0; 
+  padding: 0;
 }
-#content {
-    border: none;
-    width: 100%}
-#bodyContent{
-    width:100%;
+
+.nav {
+  background: #232323;
+  height: 60px;
+  display: inline-block;
 }
-#igemlogo{
-  width: 70%;
+
+.nav li {
+  float: left;
+  list-style-type: none;
+  position: relative;
 }
-#iitmlogo{
-  width: 100%;
+
+.nav li a {
+  font-size: 16px; 
+  color: white;
+  display: block;
+  line-height: 60px;
+  padding: 0 26px;
+  text-decoration: none;
+  border-left: 1px solid #2e2e2e;
+  font-family: Montserrat, sans-serif;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
-#whiting{
+.nav li a:hover {
+  background-color: #2e2e2e;
+}
+
+#settings a {
+  padding: 18px;
+  height: 24px;
+  font-size: 10px;
+  line-height: 24px;
+}
+
+#search {
+  width: 357px;
+  margin: 4px;
+}
+#search_text{
+  width: 297px;
+  padding: 15px 0 15px 20px;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  border: 0 none;
+  height: 52px;
+  margin-right: 0;
+  color: white;
+  outline: none;
+  background: #1f7f5c;
+  float: left;
+  box-sizing: border-box;
+  transition: all 0.15s;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
   color: white;
 }
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: white;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: white;
+}
+#search_text:focus {
+  background: rgb(64, 151, 119);
+}
+#search_button {
+  border: 0 none;
+  background: #1f7f5c url("http://designmodo.com/demo/dropdown-menu-search/search.png") center no-repeat;
+  width: 60px; 
+  float: left;
+  padding: 0;
+  text-align: center;
+  height: 52px;
+  cursor: pointer;
+}
+
+#options a{
+  border-left: 0 none;
+}
+#options>a {
+  background-image: url("http://designmodo.com/demo/dropdown-menu-search/triangle.png");
+  background-position: 85% center;
+  background-repeat: no-repeat;
+  padding-right: 42px;
+}
+.subnav {
+  visibility: hidden;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 200px;
+  height: auto;
+  opacity: 0;
+  transition: all 0.1s;
+  background: #232323;
+}
+.subnav li {
+  float: none;
+}
+.subnav li a {
+  border-bottom: 1px solid #2e2e2e;
+}
+#options:hover .subnav {
+  visibility: visible;
+  top: 100%;
+  opacity: 1;
+}
+#logo{
+  width: 10%;
+}
+.nav{
+  width: 100%;
+}
 </style>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>
-      Indian Institute of Technology Madras
-    </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://d3awrefyh2q0ta.cloudfront.net/css/style.531afeef.min.css" media="screen">
-    <!-- Typekit-->
-    <script id="twitter-wjs" src="//platform.twitter.com/widgets.js">
-    </script>
+    <meta name="robots" content="noindex,follow">
+</head>
+<body>
+  <ul class="nav">
+    <li id="settings">
+      <a href="#"><img id="logo" src=""></a>
+    </li>
+    <li>
+      <a href="#">Application</a>
+    </li>
+    <li>
+      <a href="#">Board</a>
+    </li>
     
-    <script type="text/javascript" src="//use.typekit.net/yea1ylg.js">
-    </script>
-    <style type="text/css">
-      .tk-proxima-nova{
-        font-family:"proxima-nova",sans-serif;
-      }.tk-ff-market-web{
-        font-family:"ff-market-web",cursive;
-      }
-    </style>
-    <!-- <link rel="stylesheet" href="http://use.typekit.net/c/f3cd47/ff-market-web:n4,proxima-nova:i3:i4:i6:i7:n3:n4:n6:n7.Y03:J:2,Vmy:J:2,W0W:J:2,Vn2:J:2,W0Z:J:2,Vmx:J:2,W0V:J:2,W0X:J:2,W0Y:J:2/d?3bb2a6e53c9684ffdc9a9bf31a5b2a627c8329a6b973a142aa6c52018ec519509f167a99eab0bacdc45c79ef6cf2a26f2544fe95ce79f8fe7a743f49dfd3155afbf3b76058682516726d181a76135fc1b5c09a2b7335c5df6a40f4572ebe3b5a98d82e49a12c7bd001464235f30943e28e4de30a2d790cd00a5cb205ea1dc928a9c41d2982dfbbe9e22601ef56bfb7197d22beed8dd3"> -->
-    <script type="text/javascript">
-      try{
-        Typekit.load();
-      }catch(e){
-      }
-    </script>
-    <!--[if IE]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-</script>
-<![endif]-->
-  <!-- 
-<![endif]-->
-  </head>
-  <body id="sort" class="picturefill-wait picturefill-loaded" style="" data-twttr-rendered="true">
-    
-    
-   
-    <div class="container">
-      <header class="row">
-        <div class="onecol first">
-          
-          <table border="0">
-            <tr>
-            <td><img id="igemlogo" src="http://2012.igem.org/wiki/images/1/13/Igemwhite_back.png" ></td>
-            <td><img id="iitmlogo" src="http://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/200px-IIT_Madras_Logo.svg.png" ></td>
-            </tr>
-            </table>
-          
-          
-          <!-- <h1 id="logo">
-            <a href="/" class="ir">
-              Sort
-            </a>
-          </h1> -->
+    <li id="options">
+      <a href="#">Options</a>
+      <ul class="subnav">
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Application</a></li>
+        <li><a href="#">Board</a></li>
+        <li><a href="#">Options</a></li>
+      </ul>
+    </li>
+  </ul>
+<div class="row">
+        <div class="span9">
+         
+         something in span 9
         </div>
 
-        <div class="twocol last">
-          <nav id="nav-primary">
-            <div class="menu-button">
-              &nbsp;
-              <span class="touch-button">
-                <i class="ss-rows">
-                </i>
-              </span>
-              <span class="touch-button">
-                <i class="ss-rows">
-                </i>
-              </span>
-            </div>
-            <ul class="nav-buttons">
-              <li>
-                <!-- <a data-toggle="modal" data-target="#loginModal" class="button green">
-                  Log In
-                </a> -->
-                <a href="/" class="button green">
-                  Home
-                </a>
-              </li>
-              <!-- <li>
-                <a data-toggle="modal" data-target="#waitingModal" class="button blue">
-                  Waiting List
-                </a>
-              </li> -->
-            </ul>
-
-            <ul data-breakpoint="710" class="clearfix flexnav lg-screen">
-
-              <li>
-                <a href="#">
-                  Team
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Project
-                </a>
-
-              </li>
-              <li>
-                <a href="#">
-                  Parts
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Modeling
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Notebook
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Safety
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Attributions
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <div id="main" role="main" class="homepage">
-        
-        <div class="row testimonials">
-          <div class="onecol first">
-            <div data-picture="data-picture" data-alt="Moon Lee signature">
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-moon.jpg">
-              </div>
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-moon@2x.jpg" data-media="(min-width: 540px), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)">
-              </div>
-              <noscript>
-                &lt;img src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-moon.jpg" alt="Moon Lee"&gt;
-              </noscript>
-              <img alt="Moon Lee signature" class="picturefill" src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-moon@2x.jpg">
-            </div>
-            <p>
-              Sort has changed the way our business operates. We’re always on the same page with our collective knowledge.
-            </p>
-            <p class="credit moon">
-              Moon Lee - Owner of Codeflow
-            </p>
-          </div>
-          <div class="onecol">
-            <div data-picture="data-picture" data-alt="Tim Falzone signature">
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-tim.jpg">
-              </div>
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-tim@2x.jpg" data-media="(min-width: 540px), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)">
-              </div>
-              
-              <img alt="Tim Falzone signature" class="picturefill" src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-tim@2x.jpg">
-            </div>
-            <p>
-              I never want to go back to life before Sort. That was a life stuck in email with rendundancy everywhere. Never again.
-            </p>
-            <p class="credit tim">
-              Tim Falzone - Partner at Servo
-            </p>
-          </div>
-          <div class="onecol last">
-            <div data-picture="data-picture" data-alt="Chris Meeks signature">
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-chris.jpg">
-              </div>
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-chris@2x.jpg" data-media="(min-width: 540px), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)">
-              </div>
-              <noscript>
-                &lt;img src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-chris.jpg" alt="Chris Meeks"&gt;
-              </noscript>
-              <img alt="Chris Meeks signature" class="picturefill" src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-chris@2x.jpg">
-            </div>
-            <p>
-              We couldn’t put a finger on our knowledge management problem until Sort fixed it completely.
-            </p>
-            <p class="credit chris">
-              Chris Meeks - Owner of HatBox
-            </p>
-          </div>
-        </div>
-        <div class="row hover-slides clearfix">
-          <div class="onecol first hover-text">
-            <div data-video="video1" class="slide1 current">
-              <h3>
-                Description
-              </h3>
-              <a href="features_question.html" class="button green more-info">
-                More Info
-              </a>
-              <p>
-                Raise questions with your team and research articles directly through Sort.
-              </p>
-            </div>
-            <div data-video="video2" class="slide2">
-              <h3>
-                Evaluate
-              </h3>
-              <a href="features_evaluate.html" class="button green more-info">
-                More Info
-              </a>
-              <p>
-                Create answers organically as your team develops a better understanding.
-              </p>
-            </div>
-            <div data-video="video3" class="slide3">
-              <h3>
-                Learn Together
-              </h3>
-              <a href="features_learn.html" class="button green more-info">
-                More Info
-              </a>
-              <p>
-                Explore the findings and use your questions as a digital knowledge base.
-              </p>
-            </div>
-          </div>
-          <div class="twocol last">
-            <div class="slides">
-              <!-- <div data-picture="data-picture" data-alt="" class="slide1">
-                <video id="video1" autobuffer="autobuffer">
-                  <source src="https://d3awrefyh2q0ta.cloudfront.net/assets/videos/ask-a-question_adjusted.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-                  <source src="https://d3awrefyh2q0ta.cloudfront.net/assets/videos/ask-a-question_adjusted.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
-                  <source src="https://d3awrefyh2q0ta.cloudfront.net/assets/videos/ask-a-question_adjusted.ogv" type="video/ogg">
-                </video>
-              </div>
-              <div data-picture="data-picture" data-alt="" class="slide2">
-                <video id="video2" autobuffer="autobuffer">
-                  <source src="https://d3awrefyh2q0ta.cloudfront.net/assets/videos/evaluate-with-focus_adjusted.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-                  <source src="https://d3awrefyh2q0ta.cloudfront.net/assets/videos/evaluate-with-focus_adjusted.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
-                  <source src="https://d3awrefyh2q0ta.cloudfront.net/assets/videos/evaluate-with-focus_adjusted.ogv" type="video/ogg">
-                </video>
-              </div>
-              <div data-picture="data-picture" data-alt="" class="slide3">
-                <video id="video3" autobuffer="autobuffer">
-                  <source src="https://d3awrefyh2q0ta.cloudfront.net/assets/videos/learn-together_adjusted.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-                  <source src="https://d3awrefyh2q0ta.cloudfront.net/assets/videos/learn-together_adjusted.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
-                  <source src="https://d3awrefyh2q0ta.cloudfront.net/assets/videos/learn-together_adjusted.ogv" type="video/ogg">
-                </video>
-              </div> -->
-            </div>
-            <!-- <div class="macbookpro">
-              <div data-picture="data-picture" data-alt="MacBook Pro">
-                <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-macbook-pro.png">
-                </div>
-                <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-macbook-pro@2x.png" data-media="(min-width: 540px), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)">
-                </div>
-                <noscript>
-                  &lt;img src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-macbook-pro.png" alt="MacBook Pro"&gt;
-                </noscript>
-                <img alt="MacBook Pro" class="picturefill" src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-macbook-pro@2x.png">
-              </div>
-            </div> -->
-          </div>
-        </div>
-        <div class="row team-form">
-          <div class="onecol first">
-            <div data-picture="data-picture" data-alt="The Sort team">
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-team.jpg">
-              </div>
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-team@2x.jpg" data-media="(min-width: 540px), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)">
-              </div>
-              <noscript>
-                &lt;img src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-team.jpg" alt="The Sort team"&gt;
-              </noscript>
-              <img alt="The Sort team" class="picturefill" src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-team@2x.jpg">
-            </div>
-            <h3>
-              We’re Here to Help!
-            </h3>
-            <!-- Start Social Sharing Widget Sassy Bookmarks HTML (allbloggingtips.com)--> <div class="shr_ss shr_publisher"> </div> <!-- End Shareaholic Sassy Bookmarks HTML --> <!-- Start Shareaholic Sassy Bookmarks settings --> <script type="text/javascript">   var SHRSS_Settings = {"shr_ss":{"src":"//dtym7iokkjlif.cloudfront.net/media/downloads/sassybookmark","link":"","service":"5,7,2,313,38,201,88,74","apikey":"b87f5899d80a5edce8b5e55f58542ef0f","localize":true,"shortener":"bitly","shortener_key":"","designer_toolTips":true,"tip_bg_color":"black","tip_text_color":"white","viewport":true,"twitter_template":"${title} - ${short_link} via @Shareaholic"}};   </script>  <!-- End Shareaholic Sassy Bookmarks settings --> <!-- Start Shareaholic Sassy Bookmarks script --> <script type="text/javascript">        (function() {             var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;             sb.src = ("https:" == document.location.protocol ? "https://dtym7iokkjlif.cloudfront.net" : "http://cdn.shareaholic.com") + "/media/js/jquery.shareaholic-publishers-ss.min.js";             var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb, s);         })();         </script> <!-- End Shareaholic Sassy Bookmarks script -->
-            <p>
-              If you ever need a helping hand, our support team is&nbsp;
-              <a href="http://support.teamsort.com">
-                a quick email away
-              </a>
-              . We also maintain a robust&nbsp;
-              <a href="http://support.teamsort.com/">
-                FAQ
-              </a>
-              &nbsp;and&nbsp;
-              <a href="http://servomakes.com/articles/">
-                write
-              </a>
-              &nbsp;about our constant improvement of Sort.
-            </p>
-          </div>
-          <div class="onecol">
-            <div data-picture="data-picture" data-alt="Sort is secure from the ground up">
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-security.jpg">
-              </div>
-              <div data-src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-security@2x.jpg" data-media="(min-width: 540px), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)">
-              </div>
-              <noscript>
-                &lt;img src="https://d3awrefyh2q0ta.cloudfront.net/assets/image-security.jpg" alt="Sort is secure from the ground up"&gt;
-              </noscript>
-              <img alt="Sort is secure from the ground up" class="picturefill" src="https://d3awrefyh2q0ta.cloudfront.net/assets/retina/image-security@2x.jpg">
-            </div>
-            <h3>
-              Full Data Security
-            </h3>
-            <p>
-              We take the safety of your data very seriously. In addition to encrypting your connection, we replicate data across multiple locations and perform regular backups. Payments are processed using the highest standard of security on a PCI compliant network.
-            </p>
-          </div>
-          <div class="onecol last form">
-            <!-- <h2>
-              Waiting List
-            </h2>
-            <p>
-              There are&nbsp;
-              <span class="waitinglist_count">
-                398
-              </span>
-              in the queue.
-            </p>
-            <form action="/__internal/waitinglist" method="POST" class="waitinglist">
-              <div class="validated_field">
-                <span class="field">
-                  <input type="text" name="name" autofocus="autofocus" placeholder="Your full name" class="placeholder">
-                </span>
-                <p class="error hide">
-                </p>
-              </div>
-              <div class="validated_field">
-                <span class="field">
-                  <input type="text" name="company" placeholder="Company or Organization" class="placeholder">
-                </span>
-                <p class="error hide">
-                </p>
-              </div>
-              <div class="validated_field">
-                <span class="field">
-                  <input type="email" name="email" spellcheck="false" placeholder="Email" class="placeholder">
-                </span>
-                <p class="error hide">
-                </p>
-              </div>
-              <input type="submit" value="Join the Waiting List" class="waitinglist_submit button green">
-            </form>
-            <p>
-              By clicking the button you agree to the 
-              <a href="/terms.html" target="_blank">
-                Terms of Service
-              </a>
-              policy.
-            </p> -->
-          </div>
+        <div class="span3">
+          something in span 357
+          <p class="demo-download-text">Your likes, shares and comments make us happy!</p>
         </div>
       </div>
-    </div>
-    <footer class="clearfix">
-      <div class="wrapper clearfix">
-        <nav class="nav-footer clearfix">
-          <li>
-            <a href="/features.html">
-              Features
-            </a>
-          </li>
-          <li>
-            <a href="http://support.teamsort.com">
-              Support
-            </a>
-          </li>
-          <li>
-            <a href="/about.html">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/plans.html">
-              Plans
-            </a>
-          </li>
-        </nav>
-        <div class="buttons">
-          <a data-toggle="modal" data-target="#waitingModal" href="#" class="button green">
-            Waiting List
-          </a>
-          <a data-toggle="modal" data-target="#loginModal" href="#" class="button blue">
-            Log In
-          </a>
-        </div>
-      </div>
-      <div class="bottom-links clearfix">
-        <div class="wrapper">
-          <div class="copyright">
-            <p>
-              © Copyright 2013 BetaTurtle |
-              <a href="http://servomakes.com">
-                Made by Neo
-              </a>
-            </p>
-            <p class="links">
-              <a href="/terms.html" target="_blank">
-                Terms of Service
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="https://d3awrefyh2q0ta.cloudfront.net/js/script.d99575c2.min.js">
-    </script>
-    <script>
-      // $(document).ready(function() {
-      //   $(".flexnav").flexNav();
-      // });
-    </script>
-    
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-43576754-1', 'igem.org');
-  ga('send', 'pageview');
 
-</script>
-  </body>
-</html>
+</body></html>

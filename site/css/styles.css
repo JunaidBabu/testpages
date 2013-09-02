@@ -1,0 +1,59 @@
+body{
+margin:0;
+padding:0;
+border:0;
+background: #186185 url("../images/gradientblue_img.svg") 50% 50% fixed;
+background-size: 100% 100%;
+}
+.blue-color
+{
+background: #32839E;
+background: -moz-linear-gradient(-45deg, #5FA0C0 0%, #32839E 100%);
+background: -webkit-linear-gradient(-45deg, #5FA0C0 0%,#32839E 100%);
+background: -o-linear-gradient(-45deg, #5FA0C0 0%,#32839E 100%);
+background: linear-gradient(to bottom right, #5FA0C0 0%,#32839E 100%);
+}
+.pink-color {
+background: #9D315C;
+background: -moz-linear-gradient(-45deg, #C05F7C 0%, #9D315C 100%);
+background: -webkit-linear-gradient(-45deg, #C05F7C 0%,#9D315C 100%);
+background: -o-linear-gradient(-45deg, #C05F7C 0%,#9D315C 100%);
+background: linear-gradient(to bottom right, #C05F7C 0%,#9D315C 100%);
+}
+.transparent{
+background: url('../images/transparent.png') 0 0 repeat;
+}
+.post-text{
+color:white;
+font-size:18px;
+}
+.special-text
+{
+	font-size:24px;
+	color:#ccc;
+	margin:15px 0;
+	
+	transition:color .5s;
+	-webkit-transition:color .5s;
+	-moz-transition:color .5s;
+	-o-transition:color .5s;
+	-ms-transition:color .5s;
+}
+.special-text:hover
+{
+	color:#fff;
+}
+.menu-item
+{
+	opacity:.6;
+
+	transition:opacity .3s;
+	-webkit-transition:opacity .3s;
+	-moz-transition:opacity .3s;
+	-o-transition:opacity .3s;
+	-ms-transition:opacity .3s;
+}
+.menu-item:hover
+{
+	opacity:1;
+}
